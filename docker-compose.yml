@@ -5,7 +5,7 @@ devpi:
   ports:
     - "3141:3141"
   volumes:
-    - cachedata/devpi:/data
+    - ./devpi:/data
 
 # squid-deb-proxy
 squid:
@@ -14,4 +14,4 @@ squid:
   ports:
     - "3128:8000"
   volumes:
-    - cachedata/squid:/data
+    - ./squid:/data
