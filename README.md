@@ -1,6 +1,6 @@
 # proxycontainer
 
-squid and devpi docker based proxies for use with images that can make use of the using on-build triggers
+squid and devpi docker based proxies for use with images that are setup to make use of proxies, if they are available using on-build triggers during image build.
 
 ```
 # Determine build host
@@ -22,4 +22,4 @@ ONBUILD RUN echo -en "HEAD /\n\n\n" | nc -q 1 -v `cat ${BUILD_HOST_FILE}` 3141 |
   && (echo "no-cache-dir = true" >> ${PIP_CONF_DIR}/pip.conf) \
   && (echo "cache-dir = none" >> ${PIP_CONF_DIR}/pip.conf) \
   || echo "No devpi detected on docker host"
-  ```
+```
